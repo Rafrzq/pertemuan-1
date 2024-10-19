@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: "Segoe UI";
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            background: #e2e2e2;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .item h2 {
+            margin: 0 0 10px;
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: "Segoe UI";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+        <div class="grid">
+            <div class="item">
+                <h2>Nama</h2>
+                <p>Raffi Sya Dwi Razzaq</p>
+            </div>
+            <div class="item">
+                <h2>Usia</h2>
+                <p>18 Tahun</p>
+            </div>
+            <div class="item">
+                <h2>Prodi</h2>
+                <p>Sistem Informasi</p>
+            </div>
+            <div class="item">
+                <h2>Hobi</h2>
+                <p>Badminton, Membaca, dan Menonton Film</p>
+            </div>
+            <div class="item">
+                <h2>Idola</h2>
+                <p>Jejouw</p>
+            </div>
+            <div class="item">
+                <h2>Minat</h2>
+                <p>Teknologi, Desain, dan Game</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

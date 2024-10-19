@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Grid Layout</title>
+
+    <style>
+        .item1 {
+            grid-area: One;
+        }
+        .item2 {
+            grid-area: Two;
+        }
+        .item3 {
+            grid-area: Three;
+        }
+        .item4 {
+            grid-column: 2/5;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+            "One One One One"
+            "Two Three Three Three"
+            "Four Four Four Four";
+            grid-gap: 25px;
+            background-color: white;
+            padding: 10px;
+        }
+        .grid-container > div {
+            background-color: #6d7dc7;
+            text-align: left;
+            padding: 25px ;
+            font-size: 30px;
+            color: white;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">One</div>
+        <div class="item2">Two</div>
+        <div class="item3">Three</div>
+        <div class="item4">Four</div>
+    </div>
+</body>
+</html>

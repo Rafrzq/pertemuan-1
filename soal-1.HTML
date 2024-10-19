@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+</head>
+<head>
+<style>
+    .grid-container {
+    display: grid;
+    grid-template-columns: 365px 365px 365px;
+    grid-template-rows: 400px;
+    background-color: white;
+    padding: 10px;
+    grid-gap: 10px;
+    }
+    
+    .grid-item {
+    background-color: rgb(84, 123, 196);
+    border: 1px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: 20px;
+    color: white;
+    border-radius: 10px;
+    }
+</style>
+<style>
+    body {
+        font-family: "Segoe UI";
+    }
+</style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">I am small</div>
+        <div class="grid-item">I have more content than the very small item</div>
+        <div class="grid-item">I have lots of content. So much content that i don't know
+            where it is all going to go.I'm glad that CSS is pretty good at dealing with
+            situations where we end up with more words than expected!</div>
+    </div>
+</body>
+</html>
