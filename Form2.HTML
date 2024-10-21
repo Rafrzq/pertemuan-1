@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Tambah Mahasiswa</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            const currentTime = new Date().toLocaleTimeString();
+            const messageContainer = document.getElementById('message');
+            messageContainer.innerHTML = `<h2>Selamat Data Anda Berhasil Di Simpan!</h2><p>Waktu saat ini: ${currentTime}</p>`;
+            messageContainer.style.display = 'block';
+
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+
+        function addNewInput() {
+            const formContainer = document.getElementById('formContainer');
+
+            const newForm = document.createElement('div');
+            newForm.style.marginBottom = '15px';
+            newForm.innerHTML = `
+                <label style="display: block; font-size: 16px; color: #555;">Nama Lengkap:</label>
+                <input type="text" name="nama" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;">
+                <label style="display: block; font-size: 16px; color: #555; margin-top: 10px;">NIM:</label>
+                <input type="number" name="nim" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;">
+                <label style="display: block; font-size: 16px; color: #555; margin-top: 10px;">Alamat:</label>
+                <textarea cols="31" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;"></textarea>
+            `;
+            formContainer.appendChild(newForm);
+        }
+    </script>
+</head>
+<body style="background-image: url('a2.webp'); height: 100vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+
+    <div id="message" style="display: none; text-align: center; margin-bottom: 20px; color: green;"></div>
+
+    <div style="background-color: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); width: 400px;">
+        <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif; color: #333;">Tambah Mahasiswa</h2>
+        
+        <form onsubmit="handleSubmit(event)">
+            <div id="formContainer">
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 16px; color: #555;">Nama Lengkap:</label>
+                    <input type="text" name="nama" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 16px; color: #555;">NIM:</label>
+                    <input type="number" name="nim" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 16px; color: #555;">Jenis Kelamin:</label>
+                    <label style="margin-right: 10px;">
+                        <input type="radio" name="opsi" value="laki-laki" required> Laki-Laki
+                    </label>
+                    <label>
+                        <input type="radio" name="opsi" value="perempuan"> Perempuan
+                    </label>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; font-size: 16px; color: #555;">Alamat:</label>
+                    <textarea cols="31" rows="5" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; text-transform: uppercase;"></textarea>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-bottom: 15px;">
+                <input type="submit" value="SIMPAN" style="background-color: #5cb85c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                <input type="reset" value="RESET" style="background-color: #d9534f; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            </div>
+        </form>
+
+        <button onclick="addNewInput()" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Tambah Inputan Baru</button>
+    </div>
+
+</body>
+</html>
